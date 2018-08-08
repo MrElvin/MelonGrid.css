@@ -1,0 +1,143 @@
+/*-------- 用户定义参数 --------*/
+$colnums = 12
+$gutter = 15px
+
+$sm = 576px
+$md = 768px
+$lg = 992px
+$xl = 1200px
+
+$smw = 540px
+$mdw = 720px
+$lgw = 960px
+$xlw = 1140px
+
+$sizes = sm md lg xl
+
+/*-------- 简单 reset 样式 --------*/
+html
+  box-sizing border-box
+
+*
+  margin 0
+  padding 0
+*
+*::before
+*::after
+  box-sizing border-box
+
+/*-------- col 生成函数 --------*/
+// 分别对每个 col-md-n 的 width
+col-style($_size, _n)
+  if $_size != noprefix
+    .col-{$_size}-{_n}
+      max-width ((100 / 12) * _n) %
+      flex 0 0 @max-width
+    .col-offset-{$_size}-{_n}
+      margin-left ((100 / 12) * _n) %
+    .col-order-{$_size}-{_n}
+      order _n
+  else
+    .col-{_n}
+      max-width ((100 / 12) * _n) %
+      flex 0 0 @max-width
+    .col-offset-{_n}
+      margin-left ((100 / 12) * _n) %
+    .col-order-{_n}
+      order _n
+
+/*-------- 通用的 col 样式 --------*/
+genCol($_colnums)
+  $_cols = ''
+  for n in 1..$_colnums
+    for size in $sizes
+      $_cols += '.col-' + n + ','
+      $_cols += '.col-' + size + '-' + n + ','
+  return $_cols
+
+$cols = genCol($colnums)
+
+{$cols}
+  box-sizing border-box
+  padding-left $gutter
+  padding-right $gutter
+
+/*-------- container 相关 --------*/
+.container, .container-fluid
+  width 100%
+  padding-left $gutter
+  padding-right $gutter
+  margin-right auto
+  margin-left auto
+
+.row
+  display flex
+  flex-wrap wrap
+  margin-right -1 * $gutter
+  margin-left -1 * $gutter
+
+/*-------- 对齐相关 --------*/
+align($_size)
+  if $_size != noprefix
+    for key in flex-start flex-end center space-between space-around
+      .justify-content-{$_size}-{key}
+        justify-content key
+    for key in flex-start flex-end center baseline stretch
+      .align-items-{$_size}-{key}
+        align-items key
+    for key in flex-start flex-end center space-between space-around stretch
+      .align-content-{$_size}-{key}
+        align-content key
+    for key in flex-start flex-end center baseline stretch auto
+      .align-self-{$_size}-{key}
+        align-self key
+  else
+    for key in flex-start flex-end center space-between space-around
+      .justify-content-{key}
+        justify-content key
+    for key in flex-start flex-end center baseline stretch
+      .align-items-{key}
+        align-items key
+    for key in flex-start flex-end center space-between space-around stretch
+      .align-content-{key}
+        align-content key
+    for key in flex-start flex-end center baseline stretch auto
+      .align-self-{key}
+        align-self key
+
+/*-------- 媒体查询 --------*/
+
+@media (max-width $sm)
+  .container
+    max-width auto
+  for n in 1..$colnums
+    col-style(noprefix, n)
+  align(noprefix)
+
+@media (min-width $sm) and (max-width $md)
+  .container
+    max-width $smw
+  for n in 1..$colnums
+    col-style(sm, n)
+  align(sm)
+
+@media (min-width $md) and (max-width $lg)
+  .container
+    max-width $mdw
+  for n in 1..$colnums
+    col-style(md, n)
+  align(md)
+
+@media (min-width $lg) and (max-width $xl)
+  .container
+    max-width $lgw
+  for n in 1..$colnums
+    col-style(lg, n)
+  align(lg)
+
+@media (min-width $xl)
+  .container
+    max-width $xlw
+  for n in 1..$colnums
+    col-style(xl, n)
+  align(xl)
