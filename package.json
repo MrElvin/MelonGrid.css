@@ -1,6 +1,6 @@
 {
   "name": "melongrid.css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A mini css grid framework",
   "main": "build/melonGrid.min.css",
   "scripts": {
