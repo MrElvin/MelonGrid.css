@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../build/melonGrid.css">
+  <link href="https://cdn.bootcss.com/github-markdown-css/2.10.0/github-markdown.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+    [class^=col-] {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border: 1px solid #e5e5e5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <article class="markdown-body">
+      <h1 id="melongrid-css">MelonGrid.css</h1>
+      <blockquote>
+      <p>A simple responsive css framework, learn from <a href="https://github.com/twbs/bootstrap">Bootstrap</a></p>
+      </blockquote>
+      <p>min.gz: 1.94kb</p>
+      <h2 id="installation">Installation</h2>
+      <h3 id="using-npm">Using npm</h3>
+      <pre><code>npm install melongrid.css</code></pre><p>Import <code>melongrid.css</code> into your project</p>
+      <pre><code class="language-JavaScript"><span class="hljs-keyword">import</span> <span class="hljs-string">'melongrid.css'</span></code></pre>
+      <h3 id="using-cdn">Using cdn</h3>
+      <p>Add link into your <code>.html</code> file</p>
+      <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/melody.css"</span>&gt;</span></code></pre>
+      <h2 id="document">Document</h2>
+      <p>Default responsive layout breakpoints are the same as <a href="https://github.com/twbs/bootstrap">Bootstrap</a></p>
+      <table>
+      <thead>
+      <tr>
+      <th>&nbsp;</th>
+      <th>Extra small &lt; 576px</th>
+      <th>Small ≥ 576px</th>
+      <th>Medium ≥ 768px</th>
+      <th>Large ≥ 992px</th>
+      <th>Extra Large ≥ 1200px</th>
+      </tr>
+      </thead>
+      <tbody><tr>
+      <td>Max container width</td>
+      <td>auto</td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td>1140px</td>
+      </tr>
+      <tr>
+      <td>Class prefix</td>
+      <td><code>.col-</code></td>
+      <td><code>.col-sm-</code></td>
+      <td><code>.col-md-</code></td>
+      <td><code>.col-lg-</code></td>
+      <td><code>.col-xl-</code></td>
+      </tr>
+      <tr>
+      <td># of columns</td>
+      <td>12</td>
+      <td>12</td>
+      <td>12</td>
+      <td>12</td>
+      <td>12</td>
+      </tr>
+      <tr>
+      <td>Gutter width</td>
+      <td>30px</td>
+      <td>30px</td>
+      <td>30px</td>
+      <td>30px</td>
+      <td>30px</td>
+      </tr>
+      </tbody></table>
+      <h2 id="examples">Examples</h2>
+      <h3 id="1-grid-layout">1. Grid Layout</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+          <div class="col-12 col-md-1">.col-md-1</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-8">.col-md-8</div>
+          <div class="col-12 col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4">.col-md-4</div>
+          <div class="col-12 col-md-4">.col-md-4</div>
+          <div class="col-12 col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6">.col-md-6</div>
+          <div class="col-12 col-md-6">.col-md-6</div>
+        </div>
+      </div>
+      <pre><code class="language-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-1"</span>&gt;.col-md-1&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-8"</span>&gt;.col-md-8&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-4"</span>&gt;.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-4"</span>&gt;.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-4"</span>&gt;.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-4"</span>&gt;.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-6"</span>&gt;.col-md-6&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-6"</span>&gt;.col-md-6&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+      <h3 id="2-responsive-grid-layout">2. Responsive Grid Layout</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+          <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+          <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+          <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-6">.col-6</div>
+          <div class="col-6">.col-6</div>
+        </div>
+      </div>
+      <pre><code class="language-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-12 col-md-8"</span>&gt;.col-12 .col-md-8&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-6 col-md-4"</span>&gt;.col-6.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-6 col-md-4"</span>&gt;.col-6.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-6 col-md-4"</span>&gt;.col-6.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-6 col-md-4"</span>&gt;.col-6.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-6"</span>&gt;.col-6&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-6"</span>&gt;.col-6&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+      <h3 id="3-nesting">3. Nesting</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9">
+            Level 1: .col-sm-9
+            <div class="row">
+              <div class="col-8 col-sm-6">
+                Level 2: .col-8 .col-sm-6
+              </div>
+              <div class="col-4 col-sm-6">
+                Level 2: .col-4 .col-sm-6
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-html">&lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">"col-sm-9"</span>&gt;
+    Level 1: .col-sm-9
+    &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">"row"</span>&gt;
+      &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">"col-8 col-sm-6"</span>&gt;
+        Level 2: .col-8 .col-sm-6
+      &lt;/div&gt;
+      &lt;<span class="hljs-selector-tag">div</span> class=<span class="hljs-string">"col-4 col-sm-6"</span>&gt;
+        Level 2: .col-4 .col-sm-6
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h3 id="4-offset">4. Offset</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">.col-md-4</div>
+          <div class="col-md-4 col-offset-md-4">.col-md-4 .col-offset-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-offset-md-3">.col-md-3 .col-offset-md-3</div>
+          <div class="col-md-3 col-offset-md-3">.col-md-3 .col-offset-md-3</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-offset-md-3">.col-md-6 .col-offset-md-3</div>
+        </div>
+      </div>
+      <pre><code class="language-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-md-4"</span>&gt;.col-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-md-4 col-offset-md-4"</span>&gt;.col-md-4 .col-offset-md-4&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-md-3 col-offset-md-3"</span>&gt;.col-md-3 .col-offset-md-3&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-md-3 col-offset-md-3"</span>&gt;.col-md-3 .col-offset-md-3&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-md-6 col-offset-md-3"</span>&gt;.col-md-6 .col-offset-md-3&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+      <h3 id="5-order">5. Order</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            First, but unordered
+          </div>
+          <div class="col-4 col-order-12">
+            Second, but last
+          </div>
+          <div class="col-4 col-order-1">
+            Third, but first
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      First, but unordered
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4 col-order-12"</span>&gt;
+      Second, but last
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4 col-order-1"</span>&gt;
+      Third, but first
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+      <h3 id="6-align">6. Align</h3>
+      <h4 id="vertical-alignment">Vertical Alignment</h4>
+      <div class="container">
+        <div class="row align-items-flex-start" style="height: 80px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4">
+            One of three columns
+          </div>
+          <div class="col-4">
+            One of three columns
+          </div>
+          <div class="col-4">
+            One of three columns
+          </div>
+        </div>
+        <div class="row align-items-center" style="height: 80px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4">
+            One of three columns
+          </div>
+          <div class="col-4">
+            One of three columns
+          </div>
+          <div class="col-4">
+            One of three columns
+          </div>
+        </div>
+        <div class="row align-items-flex-end" style="height: 80px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4">
+            One of three columns
+          </div>
+          <div class="col-4">
+            One of three columns
+          </div>
+          <div class="col-4">
+            One of three columns
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row align-items-flex-start"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row align-items-center"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row align-items-flex-end"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+
+      <div class="container">
+        <div class="row" style="height: 160px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4 align-self-flex-start">
+            One of three columns
+          </div>
+          <div class="col-4 align-self-center">
+            One of three columns
+          </div>
+          <div class="col-4 align-self-flex-end">
+            One of three columns
+          </div>
+        </div>
+      </div>
+
+      <pre><code class="language-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4 align-self-flex-start"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4 align-self-center"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4 align-self-flex-end"</span>&gt;
+      One of three columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+      <h4 id="horizontal-alignment">Horizontal Alignment</h4>
+
+      <div class="container">
+        <div class="row justify-content-flex-start" style="height: 60px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4">
+            One of two columns
+          </div>
+          <div class="col-4">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-center" style="height: 60px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4">
+            One of two columns
+          </div>
+          <div class="col-4">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-flex-end" style="height: 60px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4">
+            One of two columns
+          </div>
+          <div class="col-4">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-space-around" style="height: 60px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4">
+            One of two columns
+          </div>
+          <div class="col-4">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-space-between" style="height: 60px; background: #F4F6F9; margin-bottom: 6px; margin-top: 6px;">
+          <div class="col-4">
+            One of two columns
+          </div>
+          <div class="col-4">
+            One of two columns
+          </div>
+        </div>
+      </div>
+
+      <pre><code class="language-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row justify-content-flex-start"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row justify-content-center"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row justify-content-flex-end"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row justify-content-space-around"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"row justify-content-space-between"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"col-4"</span>&gt;
+      One of two columns
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+      <h2 id="customize">Customize</h2>
+      <p><code>git clone</code> the repository, modify <code>src/melonGrid.styl</code> file, customize the variable setting part</p>
+      <pre><code class="language-stylus"><span class="hljs-meta"><span class="hljs-meta-keyword">$colnums</span> = 12                 // columns number</span>
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$gutter</span> = 15px                // columns gutter</span>
+
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$sm</span> = 576px                   // media breakpoint</span>
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$md</span> = 768px</span>
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$lg</span> = 992px</span>
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$xl</span> = 1200px</span>
+
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$smw</span> = 540px                  // container width</span>
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$mdw</span> = 720px</span>
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$lgw</span> = 960px</span>
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$xlw</span> = 1140px</span>
+
+  <span class="hljs-meta"><span class="hljs-meta-keyword">$sizes</span> = sm md lg xl          // className eg: .col-sm-1 .col-md-1</span></code></pre>
+      <p><code>npm install</code> install project devDependencies, run <code>npm run build</code> pack your own <strong>MelonGrid.css</strong> in <code>build/</code></p>
+      <h2 id="license">LICENSE</h2>
+      <p><a href="https://github.com/MrElvin/MelonGrid.css/blob/master/LICENSE">MIT</a></p>
+      <p>Copyright (c) 2018 BrezyMelon</p>
+
+    </article>
+  </div>
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+</body>
+</html>

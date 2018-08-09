@@ -1,24 +1,41 @@
 # MelonGrid.css
 
-> 一个简单小巧的栅格化布局 CSS 框架，参考 [Bootstrap](https://github.com/twbs/bootstrap)
+> A simple responsive css framework, learn from [Bootstrap](https://github.com/twbs/bootstrap)
 
 min.gz: 1.94kb
 
+## Features
 
+1. 🦄 Grid Layout
+2. 🌈 Responsive Grid Layout
+3. 🎨 Support Gutter、Nesting、Offset、Order、Align
+4. 👀 Support Customization
 
-## 特点
+## Installation
 
-1. 🦄 支持栅格布局
-2. 🌈 支持响应式布局
-3. 🎨 支持 Gutter、Nestable、Offset、Order、Align
-4. 👀 支持用户自定义相关配置
+### Using npm
 
+```
+npm install melongrid.css
+```
 
+Import `melongrid.css` into your project
 
+```JavaScript
+import 'melongrid.css'
+```
 
-## 自定义
+### Using cdn
 
-`git clone` 仓库后，修改 `src/melonGrid.styl` 文件，修改用户自定义参数部分
+Add link into your `.html` file
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/melody.css">
+```
+
+## Customize
+
+`git clone` the repository, modify `src/melonGrid.styl` file, customize the variable setting part
 
 ```stylus
 $colnums = 12                 // columns number
@@ -37,10 +54,10 @@ $xlw = 1140px
 $sizes = sm md lg xl          // className eg: .col-sm-1 .col-md-1
 ```
 
-接下来 `npm install` 安装项目依赖，执行 `npm run build` 打包自定义的样式文件到 `build/`
-
-
+`npm install` install project devDependencies, run `npm run build` pack your own **MelonGrid.css** in `build/`
 
 ## LICENSE
-[MIT]()
+
+[MIT](https://github.com/MrElvin/MelonGrid.css/blob/master/LICENSE)
+
 Copyright (c) 2018 BrezyMelon

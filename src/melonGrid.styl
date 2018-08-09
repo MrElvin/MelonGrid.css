@@ -106,29 +106,27 @@ align($_size)
         align-self key
 
 /*-------- 媒体查询 --------*/
+.container
+  max-width auto
+for n in 1..$colnums
+  col-style(noprefix, n)
+align(noprefix)
 
-@media (max-width $sm)
-  .container
-    max-width auto
-  for n in 1..$colnums
-    col-style(noprefix, n)
-  align(noprefix)
-
-@media (min-width $sm) and (max-width $md)
+@media (min-width $sm)
   .container
     max-width $smw
   for n in 1..$colnums
     col-style(sm, n)
   align(sm)
 
-@media (min-width $md) and (max-width $lg)
+@media (min-width $md)
   .container
     max-width $mdw
   for n in 1..$colnums
     col-style(md, n)
   align(md)
 
-@media (min-width $lg) and (max-width $xl)
+@media (min-width $lg)
   .container
     max-width $lgw
   for n in 1..$colnums
